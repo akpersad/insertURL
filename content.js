@@ -1,6 +1,5 @@
 chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
     if (request.message === "clicked_browser_action") {
-        console.log(sender);
         var originUrl = window.location.href;
         var url1 = originUrl.split(/#(.+)/)[0];
         var url2 = originUrl.split(/#(.+)/)[1];
@@ -14,8 +13,6 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
             request.inputs.client +
             "/#" +
             url2;
-
-        console.log(combinedURL);
 
         chrome.runtime.sendMessage({
             message: "open_new_tab",
