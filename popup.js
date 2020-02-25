@@ -1,3 +1,7 @@
+var _gaq = _gaq || [];
+_gaq.push(["_setAccount", "UA-36788567-7"]);
+_gaq.push(["_trackPageview"]);
+
 function hello(event) {
     chrome.tabs.query({ active: true, currentWindow: true }, function(tabs) {
         var activeTab = tabs[0];
@@ -34,10 +38,6 @@ document.querySelector("#sameName").addEventListener("click", function(event) {
         document.querySelector("#client").disabled = false;
     }
 });
-
-var _gaq = _gaq || [];
-_gaq.push(["_setAccount", "UA-36788567-7"]);
-_gaq.push(["_trackPageview"]);
 
 (function() {
     var ga = document.createElement("script");
