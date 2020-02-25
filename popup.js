@@ -20,13 +20,13 @@ document
     });
 
 document.querySelector("#sameName").addEventListener("click", function(event) {
-    if (event.target.value) {
+    if (event.target.checked) {
         document.querySelector("#client").value = document.querySelector(
             "#theme"
         ).value;
         document.querySelector("#client").disabled = "disabled";
     } else {
-        document.querySelector("#client").value = "";
-        document.querySelector("#client").disabled = "false";
+        document.querySelector("#client").value = " ";
+        document.querySelector("#client").disabled = false;
     }
 });

@@ -2,21 +2,29 @@
 <html>
     <head>
         <title>Test</title>
+        <link href="styles.css" rel="stylesheet" />
     </head>
+
     <body>
-        <div>
-            <h1>Test Header</h1>
+        <div class="main-div">
+            <h2>Insert Url</h2>
             <form>
-                <label for="theme">Theme Name:</label>
-                <input type="text" id="theme" name="theme" />
+                <div class="theme-container">
+                    <label for="theme">Theme Name:</label>
+                    <input type="text" id="theme" name="theme" />
+                </div>
 
-                <label for="client">Client Name:</label>
-                <input type="text" id="client" name="client" />
+                <div class="sameName-container">
+                    <input type="checkbox" id="sameName" />
+                    <label for="sameName"
+                        >Check if Client and Theme are the same</label
+                    >
+                </div>
 
-                <label for="sameName"
-                    >Check if Client and Theme are the same:</label
-                >
-                <input type="checkbox" id="sameName" />
+                <div class="client">
+                    <label for="client">Client Name:</label>
+                    <input type="text" id="client" name="client" />
+                </div>
 
                 <button type="submit" id="andrew-chrome-extension">
                     Insert Url
